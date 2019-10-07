@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label "Name" %>
+    <%= form.select :user_id, User.all.collect { |p| [ p.name, p.id ] }, include_blank: false %>
   </div>
 
   <div class="field">
@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :clockout_time %>
-    <%= form.datetime_select :clockout_time %>
+    <%= form.datetime_select :clockout_time, include_blank:true%>
   </div>
 
   <div class="actions">

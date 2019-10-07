@@ -15,9 +15,9 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <td><%= event.user_id %></td>
-        <td><%= event.clockin_time %></td>
-        <td><%= event.clockout_time %></td>
+        <td><%= event.user.name %></td>
+        <td><%= event.clockin_time.strftime("%I:%M %P on %d %b, %y") %></td>
+        <td><%= event.clockout_time&.strftime("%I:%M %P on %d %b, %y")%> </td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
