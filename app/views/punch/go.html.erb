@@ -1,0 +1,21 @@
+<h1>Clock In or Out</h1>
+<% if flash[:info] %>
+  <div class="flash">
+    <%= flash[:info] %>
+  </div>
+<% end %>
+
+<%= form_with(url: go_punch_index_path, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.select :id, @teachers.collect { |p| [ p.name, p.id ] }, include_blank: false %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Go" %>
+  </div>
+<% end %>
+
+<%= link_to 'New Teacher', new_user_path %>
+<%= link_to 'Reset', '/punch/go' %>
