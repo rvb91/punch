@@ -4,7 +4,9 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.includes(:user).all
+    @events = Event.includes(:user).
+      order('events.clockin_time DESC, events.clockout_time DESC').
+      all
   end
 
   # GET /events/1
