@@ -7,9 +7,9 @@ When a user clocks in, the system creates a new event with the `clockin_time`  t
 
 # Demo URLs
 Note: On first use please wait for a few minutes as Heroku takes time to boot up the dyno.
-Teachers: https://punchcard-demo.herokuapp.com/
-Admins - View Events: https://punchcard-demo.herokuapp.com/events
-Admins - View Users: https://punchcard-demo.herokuapp.com/users
+- Teachers: https://punchcard-demo.herokuapp.com/
+- Admins - View Events: https://punchcard-demo.herokuapp.com/events
+- Admins - View Users: https://punchcard-demo.herokuapp.com/users
 
 
 ## Teachers clocking in / out
