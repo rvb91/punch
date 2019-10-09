@@ -5,10 +5,12 @@ The app has to 2 models, `Event` and `User`. The `User` model stores the users n
 
 When a user clocks in, the system creates a new event with the `clockin_time`  timestamped to `Time.now`. When the user clocks out, the same event's `clockout_time` is timestamped to `Time.now`. A user cannot create a new event without clockouting out a previous event.
 
-# Demo path
-## URL
-Hosted on Heroku
-url: TBD
+# Demo URLs
+Note: On first use please wait for a few minutes as Heroku takes time to boot up the dyno.
+Teachers: https://punchcard-demo.herokuapp.com/
+Admins - View Events: https://punchcard-demo.herokuapp.com/events
+Admins - View Users: https://punchcard-demo.herokuapp.com/users
+
 
 ## Teachers clocking in / out
 Teachers access the app at root path `/`. Select their name from the dropdown and click "Go". The system with automatically clock you in or out. They can sign up by going to `/users/new`
